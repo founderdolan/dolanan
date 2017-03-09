@@ -28,6 +28,12 @@ $text-color: #484848;
 
 // Navbar
 $navbar-default-bg: #fff;
+$btn-default-border:             #fff !default;
+$btn-primary-border:             $brand-primary !default;
+$btn-success-border:             $brand-success !default;
+$btn-info-border:                $brand-info !default;
+$btn-warning-border:             $brand-warning !default;
+$btn-danger-border:              $brand-danger !default;
 
 // Buttons
 $btn-default-color: $text-color;
@@ -41,7 +47,7 @@ $input-color-placeholder: lighten($text-color, 30%);
 $panel-default-heading-bg: #fff;
 $links : #008489;
 
-//** Global textual link color.
+// Global textual link color.
 $link-color:            $links !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      $link-color !default;
