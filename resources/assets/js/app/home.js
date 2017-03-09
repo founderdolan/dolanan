@@ -1,4 +1,7 @@
 import Vue from 'vue'
+window.$ = window.jQuery = require('jquery')
+require('bootstrap-sass')
+
 import Home from '../trip/Home.vue'
 
 new Vue({

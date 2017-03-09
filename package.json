@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "cross-env": "^3.2.3",
+    "swiper": "^3.4.1",
     "webpack": "^2.2.1"
   }
 }
