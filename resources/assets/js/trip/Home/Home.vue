@@ -1,10 +1,14 @@
 <template>
 	<div>
 		<DolanHeader />
+		<Jumbotron />
 		
 		<div class="container">
 			
 		</div>
+
+		<DolanFooter />
+
 	</div>
 </template>
 
@@ -15,13 +19,17 @@
 <script>
 
 	 import DolanHeader from '../../global/Header.vue'
+	 import Jumbotron from '../../global/Jumbotron'
+	 import DolanFooter from '../../global/Footer.vue'
 	 
 	 export default {
         mounted() {
         	require('swiper')
         },
         components : {
-        	DolanHeader
+        	DolanHeader,
+        	Jumbotron,
+        	DolanFooter
         }
     }
 </script>

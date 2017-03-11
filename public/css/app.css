@@ -11973,3 +11973,7 @@ button.swiper-pagination-bullet {
             transform: rotate(360deg);
   }
 }
+
+.color-grey-1 {
+  color: #484848;
+}
