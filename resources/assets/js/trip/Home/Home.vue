@@ -20,9 +20,7 @@
 
 	 import DolanHeader from '../../global/Header.vue'
 	 import Jumbotron from '../../global/Jumbotron'
-
 	 import TripCardContainer from './partial/TripCardContainer'
-
 	 import DolanFooter from '../../global/Footer.vue'
 	 
 	 export default {
