@@ -4,7 +4,7 @@
 		<Jumbotron />
 		
 		<div class="container">
-			
+			<TripCardContainer />
 		</div>
 
 		<DolanFooter />
@@ -20,6 +20,9 @@
 
 	 import DolanHeader from '../../global/Header.vue'
 	 import Jumbotron from '../../global/Jumbotron'
+
+	 import TripCardContainer from './partial/TripCardContainer'
+
 	 import DolanFooter from '../../global/Footer.vue'
 	 
 	 export default {
@@ -29,7 +32,8 @@
         components : {
         	DolanHeader,
         	Jumbotron,
-        	DolanFooter
+        	DolanFooter,
+        	TripCardContainer
         }
     }
 </script>

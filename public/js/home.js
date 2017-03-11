@@ -10733,6 +10733,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 
 exports.default = {
 	components: {
@@ -10748,6 +10749,8 @@ exports.default = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+//
+//
 //
 //
 //
@@ -10869,11 +10872,35 @@ var _Jumbotron = __webpack_require__(22);
 
 var _Jumbotron2 = _interopRequireDefault(_Jumbotron);
 
+var _TripCardContainer = __webpack_require__(63);
+
+var _TripCardContainer2 = _interopRequireDefault(_TripCardContainer);
+
 var _Footer = __webpack_require__(20);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 exports.default = {
        mounted: function mounted() {
@@ -10883,26 +10910,10 @@ exports.default = {
        components: {
               DolanHeader: _Header2.default,
               Jumbotron: _Jumbotron2.default,
-              DolanFooter: _Footer2.default
+              DolanFooter: _Footer2.default,
+              TripCardContainer: _TripCardContainer2.default
        }
-}; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+};
 
 /***/ }),
 /* 9 */
@@ -13353,7 +13364,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.footer {\n\tmargin-top: 70px;\n}\n.footer-block {\n    position: relative;\n    width: 100%;\n    margin-bottom: 70px;\n    float: left;\n    padding-right: 15px;\n    padding-left: 15px;\n}\n", ""]);
+exports.push([module.i, "\n.footer {\n\tmargin-top: 70px;\n\toverflow: hidden;\n}\n.footer-block {\n    position: relative;\n    width: 100%;\n    margin-bottom: 70px;\n    float: left;\n    padding-right: 15px;\n    padding-left: 15px;\n}\n", ""]);
 
 // exports
 
@@ -13381,7 +13392,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.jumbotron{\n\tbackground: url('/img/welcome3.jpg');\n\tbackground-repeat: no-repeat;\n\tbackground-position: 0px -250px;\n\theight: 500px;\n\ttext-align: center;\n}\n.jumbotron-text {\n\tpadding-top: 50px;\n\tcolor: #ffffff\n}\n.jumbotron-text h1{\n\tfont-size: 60px;\n    font-weight: 700;\n    line-height: 70px;\n    text-transform: uppercase;\n    letter-spacing: 10px;\n}\n.jumbotron-text p {\n\tfont-size: 14px;\n    line-height: 26px;\n    font-weight: 400;\n}\n.jumbotron-search {\n\tpadding-top: 70px;\n}\n.jumbotron-search .input-group {\n\twidth: 50%;\n\tmargin: 0 auto;\n}\n.jumbotron-search input{\n\tpadding: 20px;\n\tborder: 0px;\n}\n.jumbotron-search .input-group-addon {\n\tbackground: #ff6600;\n\tborder: 0px;\n}\n.jumbotron-search .input-group-addon button{\n\tbackground: transparent;\n\tborder: 0px;\n\tcolor: white;\n}\n@media(max-width: 320px){\n.jumbotron-text h1{\n\t\tfont-size: 30px;\n\t\tline-height: 45px\n}\n.jumbotron-search .input-group {\n\t\twidth: 80%;\n}\n}\n@media(min-width: 321px) and (max-width: 479px){\n.jumbotron-text h1{\n\t\tfont-size: 30px;\n\t\tline-height: 50px;\n}\n.jumbotron-search .input-group {\n\t\twidth: 80%;\n}\n}\n@media(min-width: 480px) and (max-width: 767px){\n.jumbotron-text h1{\n\t\tfont-size: 40px;\n}\n.jumbotron-search .input-group {\n\t\twidth: 70%;\n}\n}\n\n", ""]);
+exports.push([module.i, "\n.jumbotron{\n\tbackground: url('/img/welcome3.jpg');\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\theight: 500px;\n\ttext-align: center;\n}\n.jumbotron-text {\n\tcolor: #484848;\n}\n.jumbotron-text h1 span {\n\tfont-weight: 700;\n\tcolor: #ff6600;\n}\n@media(max-width: 743px){\n.jumbotron-text h1{\n\t\tfont-size: 30px;\n\t\tline-height: 40px;\n\t\tletter-spacing: -0.6px;\n\t\tfont-weight: 400;\n\t\tmargin-top: 100px;\n}\n.jumbotron-search .input-group {\n\t\twidth: 70%;\n\t\tmargin: 0 auto;\n}\n}\n@media(min-width: 744px){\n.jumbotron-text h1{\n\t\tfont-size: 48px;\n\t\tline-height: 55px;\n\t\tletter-spacing: -0.8px;\n\t\tfont-weight: 300;\n\t\tmargin-top: 100px;\n}\n.jumbotron-search .input-group {\n\t\twidth: 50%;\n\t\tmargin: 0 auto;\n}\n}\n.jumbotron-search {\n\tpadding-top: 30px;\n}\n.jumbotron-search input{\n\tpadding: 25px;\n\tborder: 0px;\n}\n.jumbotron-search .input-group-addon {\n\tbackground: #ff6600;\n\tborder: 0px;\n}\n.jumbotron-search .input-group-addon button{\n\tbackground: transparent;\n\tborder: 0px;\n\tcolor: white;\n}\n@media(max-width: 320px){\n.jumbotron-text h1{\n\t\tfont-size: 30px;\n\t\tline-height: 45px\n}\n.jumbotron-search .input-group {\n\t\twidth: 80%;\n}\n}\n\n\n", ""]);
 
 // exports
 
@@ -19416,7 +19427,7 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('DolanHeader'), _vm._v(" "), _c('Jumbotron'), _vm._v(" "), _c('div', {
     staticClass: "container"
-  }), _vm._v(" "), _c('DolanFooter')], 1)
+  }, [_c('TripCardContainer')], 1), _vm._v(" "), _c('DolanFooter')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -19531,7 +19542,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "jumbotron"
   }, [_c('div', {
     staticClass: "jumbotron-text"
-  }, [_c('h1', [_vm._v("Pesan Trip Favoritmu")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nulla, nobis aut enim quaerat quasi commodi maiores expedita molestias sit.")])]), _vm._v(" "), _c('div', {
+  }, [_c('h1', [_c('span', [_vm._v("Mau kemana?")]), _vm._v("\n\t\t\t\tMulai tripmu dengan Dolan.\n\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "jumbotron-search"
   }, [_c('div', {
     staticClass: "input-group stylish-input-group"
@@ -29086,6 +29097,192 @@ module.exports = g;
 __webpack_require__(4);
 module.exports = __webpack_require__(5);
 
+
+/***/ }),
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+	mounted: function mounted() {
+		__webpack_require__(19);
+
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			slidesPerView: 3,
+			paginationClickable: true,
+			spaceBetween: 30
+		});
+	}
+};
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(65)
+
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(61),
+  /* template */
+  __webpack_require__(64),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/var/www/resources/assets/js/trip/Home/partial/TripCardContainer.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] TripCardContainer.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4f4c3d5e", Component.options)
+  } else {
+    hotAPI.reload("data-v-4f4c3d5e", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "tripcard-container"
+  }, [_c('div', {
+    staticClass: "swiper-container"
+  }, [_c('div', {
+    staticClass: "swiper-wrapper"
+  }, [_c('div', {
+    staticClass: "swiper-slide"
+  }, [_vm._v("Slide 1")]), _vm._v(" "), _c('div', {
+    staticClass: "swiper-slide"
+  }, [_vm._v("Slide 2")]), _vm._v(" "), _c('div', {
+    staticClass: "swiper-slide"
+  }, [_vm._v("Slide 3")]), _vm._v(" "), _c('div', {
+    staticClass: "swiper-slide"
+  }, [_vm._v("Slide 4")]), _vm._v(" "), _c('div', {
+    staticClass: "swiper-slide"
+  }, [_vm._v("Slide 5")]), _vm._v(" "), _c('div', {
+    staticClass: "swiper-slide"
+  }, [_vm._v("Slide 6")]), _vm._v(" "), _c('div', {
+    staticClass: "swiper-slide"
+  }, [_vm._v("Slide 7")]), _vm._v(" "), _c('div', {
+    staticClass: "swiper-slide"
+  }, [_vm._v("Slide 8")]), _vm._v(" "), _c('div', {
+    staticClass: "swiper-slide"
+  }, [_vm._v("Slide 9")]), _vm._v(" "), _c('div', {
+    staticClass: "swiper-slide"
+  }, [_vm._v("Slide 10")])]), _vm._v(" "), _c('div', {
+    staticClass: "swiper-pagination"
+  })])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-4f4c3d5e", module.exports)
+  }
+}
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(62);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("58cd263d", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-4f4c3d5e!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TripCardContainer.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-4f4c3d5e!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TripCardContainer.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

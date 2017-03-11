@@ -12,6 +12,7 @@
 <style>
 	.footer {
 		margin-top: 70px;
+		overflow: hidden;
 	}
 	.footer-block {
 	    position: relative;
