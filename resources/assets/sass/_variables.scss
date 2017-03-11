@@ -45,7 +45,7 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
-$links : #008489;
+$links : $main-color;
 
 // Global textual link color.
 $link-color:            $links !default;

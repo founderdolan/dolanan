@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 52);
+/******/ 	return __webpack_require__(__webpack_require__.s = 56);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -195,7 +195,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(49)
+var listToStyles = __webpack_require__(53)
 
 /*
 type StyleObject = {
@@ -15985,11 +15985,11 @@ else if (typeof define === 'function' && define.amd) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {
 
-var _vue = __webpack_require__(50);
+var _vue = __webpack_require__(54);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _Home = __webpack_require__(29);
+var _Home = __webpack_require__(30);
 
 var _Home2 = _interopRequireDefault(_Home);
 
@@ -16030,19 +16030,19 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _FooterSatu = __webpack_require__(27);
+var _FooterSatu = __webpack_require__(28);
 
 var _FooterSatu2 = _interopRequireDefault(_FooterSatu);
 
-var _FooterDua = __webpack_require__(25);
+var _FooterDua = __webpack_require__(26);
 
 var _FooterDua2 = _interopRequireDefault(_FooterDua);
 
-var _FooterTiga = __webpack_require__(28);
+var _FooterTiga = __webpack_require__(29);
 
 var _FooterTiga2 = _interopRequireDefault(_FooterTiga);
 
-var _FooterEmpat = __webpack_require__(26);
+var _FooterEmpat = __webpack_require__(27);
 
 var _FooterEmpat2 = _interopRequireDefault(_FooterEmpat);
 
@@ -16204,24 +16204,35 @@ Object.defineProperty(exports, "__esModule", {
        value: true
 });
 
-var _Header = __webpack_require__(23);
+var _Header = __webpack_require__(24);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Jumbotron = __webpack_require__(24);
+var _Jumbotron = __webpack_require__(25);
 
 var _Jumbotron2 = _interopRequireDefault(_Jumbotron);
 
-var _TripCardContainer = __webpack_require__(30);
+var _TripCardContainer = __webpack_require__(32);
 
 var _TripCardContainer2 = _interopRequireDefault(_TripCardContainer);
 
-var _Footer = __webpack_require__(22);
+var _SubHeader = __webpack_require__(70);
+
+var _SubHeader2 = _interopRequireDefault(_SubHeader);
+
+var _TripLocationContainer = __webpack_require__(74);
+
+var _TripLocationContainer2 = _interopRequireDefault(_TripLocationContainer);
+
+var _Footer = __webpack_require__(23);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
 //
 //
 //
@@ -16251,7 +16262,9 @@ exports.default = {
               DolanHeader: _Header2.default,
               Jumbotron: _Jumbotron2.default,
               DolanFooter: _Footer2.default,
-              TripCardContainer: _TripCardContainer2.default
+              TripCardContainer: _TripCardContainer2.default,
+              SubHeader: _SubHeader2.default,
+              TripLocationContainer: _TripLocationContainer2.default
        }
 };
 
@@ -16266,7 +16279,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _TripCard = __webpack_require__(66);
+var _TripCard = __webpack_require__(31);
 
 var _TripCard2 = _interopRequireDefault(_TripCard);
 
@@ -16277,10 +16290,29 @@ exports.default = {
 		__webpack_require__(4);
 
 		var swiper = new Swiper('.swiper-container', {
-			slidesPerView: 4,
+			slidesPerView: 3,
 			spaceBetween: 30,
 			nextButton: '.swiper-button-next',
-			prevButton: '.swiper-button-prev'
+			prevButton: '.swiper-button-prev',
+
+			// Responsive breakpoints
+			breakpoints: {
+				// when window width is <= 467px
+				467: {
+					slidesPerView: 1,
+					spaceBetween: 10
+				},
+				// when window width is <= 992px
+				992: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+				// when window width is <= 1120px
+				1120: {
+					slidesPerView: 3,
+					spaceBetween: 30
+				}
+			}
 		});
 	},
 
@@ -16288,6 +16320,31 @@ exports.default = {
 		TripCard: _TripCard2.default
 	}
 }; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -18745,7 +18802,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.trip-card {\n\t\tpadding: 0px 15px;\n}\n.trip-item{\n\t\tposition: relative;\n\t    width: 100%;\n\t    float: left;\n\t    display: inline-block;\n\t    box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.03);\n}\n.trip-img img {\n\t\twidth: 100%;\n    \theight: auto;\n    \tdisplay: block;\n}\n.trip-caption {\n\t\tposition: relative;\n    \twidth: 100%;\n    \tpadding: 15px 20px;\n    \tborder: 1px solid #efefef;\n    \tdisplay: -webkit-box;\n    \tdisplay: -ms-flexbox;\n    \tdisplay: flex;\n    \t-webkit-box-orient: vertical;\n    \t-webkit-box-direction: normal;\n    \t    -ms-flex-direction: column;\n    \t        flex-direction: column;\n}\n.trip-caption .trip-label {\n\t\tdisplay: -webkit-box;\n\t\tdisplay: -ms-flexbox;\n\t\tdisplay: flex;\n    \t-webkit-box-pack: justify;\n    \t    -ms-flex-pack: justify;\n    \t        justify-content: space-between;\n    \tpadding-bottom: 15px;\n}\n.label-trip{\n\t\tline-height: 2;\n}\n.trip-label .trip-location{\n\t\ttext-transform: uppercase;\n\t\tfont-size: 13px;\n\t\tfont-weight: 500;\n}\n.trip-label .trip-location .fa{\n\t\tpadding-right: 10px;\n}\n.trip-caption .trip-title{\n\t\ttext-transform: uppercase;\n\t\tfont-size: 16px;\n\t\tfont-weight: 700;\n\t\tletter-spacing: 1px;\n}\n.trip-caption .trip-price {\n\t\tfont-weight: 300;\n\t\tpadding: 10px 0px;\n}\n.trip-caption .trip-price strong{\n\t\tfont-size: 17px;\n}\n.trip-button {\n\t\tdisplay: -webkit-box;\n\t\tdisplay: -ms-flexbox;\n\t\tdisplay: flex;\n\t\t-webkit-box-orient: horizontal;\n\t\t-webkit-box-direction: normal;\n\t\t    -ms-flex-direction: row;\n\t\t        flex-direction: row;\n\t\t-ms-flex-pack: distribute;\n\t\t    justify-content: space-around;\n\t\tpadding: 10px 0px;\n}\n.trip-button a{\n\t\tpadding: 10px;\n\t\tborder-radius: 5px;\n\t\ttext-transform: uppercase;\n}\n.trip-button-detail{\n\t\tborder: 1px solid #bebebe;\n\t\tcolor: #bebebe;\n\t\tfont-weight: 700;\n\t\twebkit-transition: all 0.35s ease-in-out;\n    \t-webkit-transition: all 0.35s ease-in-out;\n    \ttransition: all 0.35s ease-in-out;\n}\n.trip-button-detail:hover{\n\t\tcolor: #ffffff;\n\t\tbackground-color: #bebebe\n}\n.trip-button-booking{\n\t\tbackground-color: #ff6600;\n\t\tcolor: #ffffff;\n\t\tborder: 2px solid #ff6600;\n\t\twebkit-transition: all 0.35s ease-in-out;\n    \t-webkit-transition: all 0.35s ease-in-out;\n    \ttransition: all 0.35s ease-in-out;\n}\n.trip-button-booking:hover {\n\t\tbackground-color: #ffffff;\n\t\tcolor: #ff6600;\n}\n", ""]);
 
 // exports
 
@@ -18759,7 +18816,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.trip-arrow{\n\tbackground: transparent;\n\ttext-align: center;\n    z-index: 5;\n    width: 40px;\n    height: 40px;\n    border-radius: 50%;\n    position: absolute;\n    top: 50%;\n    border: 2px solid #ff6600;\n}\n.trip-arrow span{\n    font-size: 16px;\n    line-height: 21px;\n    padding-top: 9px;\n    color: #ff6600;\n}\n", ""]);
 
 // exports
 
@@ -18773,7 +18830,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.footer {\n\tmargin-top: 70px;\n\toverflow: hidden;\n}\n.footer-block {\n    position: relative;\n    width: 100%;\n    margin-bottom: 70px;\n    float: left;\n    padding-right: 15px;\n    padding-left: 15px;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -18787,7 +18844,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.footer-block h6 {\n\tfont-size: 13px;\n\tfont-weight: 700;\n\ttext-transform: uppercase;\n\tletter-spacing: 1px;\n\tpadding-bottom: 15px;\n}\n.footer-block .footer-news {\n\tmargin-bottom : 15px;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: row;\n\t        flex-direction: row;\n}\n.footer-block .footer-news-content {\n\tpadding : 0px;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tmargin-left: 20px;\n}\n.footer-block .footer-news-content .footer-news-title {\n\t\ttext-transform: uppercase;\n\t\tletter-spacing: 1.3px;\n\t\tfont-weight: 500;\n}\n.footer-block .footer-news-content .footer-news-date {\n\t\tfont-size: 12px;\n\t\tcolor: #777;\n\t\tpadding: 5px 0px;\n}\n", ""]);
+exports.push([module.i, "\n.footer {\n\tmargin-top: 70px;\n\toverflow: hidden;\n}\n.footer-block {\n    position: relative;\n    width: 100%;\n    margin-bottom: 70px;\n    float: left;\n    padding-right: 15px;\n    padding-left: 15px;\n}\n", ""]);
 
 // exports
 
@@ -18801,7 +18858,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.jumbotron{\n\tbackground: url('/img/welcome3.jpg');\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\theight: 500px;\n\ttext-align: center;\n}\n.jumbotron-text {\n\tcolor: #484848;\n}\n.jumbotron-text h1 span {\n\tfont-weight: 700;\n\tcolor: #ff6600;\n}\n@media(max-width: 743px){\n.jumbotron-text h1{\n\t\tfont-size: 30px;\n\t\tline-height: 40px;\n\t\tletter-spacing: -0.6px;\n\t\tfont-weight: 400;\n\t\tmargin-top: 100px;\n}\n.jumbotron-search .input-group {\n\t\twidth: 70%;\n\t\tmargin: 0 auto;\n}\n}\n@media(min-width: 744px){\n.jumbotron-text h1{\n\t\tfont-size: 48px;\n\t\tline-height: 55px;\n\t\tletter-spacing: -0.8px;\n\t\tfont-weight: 300;\n\t\tmargin-top: 100px;\n}\n.jumbotron-search .input-group {\n\t\twidth: 50%;\n\t\tmargin: 0 auto;\n}\n}\n.jumbotron-search {\n\tpadding-top: 30px;\n}\n.jumbotron-search input{\n\tpadding: 25px;\n\tborder: 0px;\n}\n.jumbotron-search .input-group-addon {\n\tbackground: #ff6600;\n\tborder: 0px;\n}\n.jumbotron-search .input-group-addon button{\n\tbackground: transparent;\n\tborder: 0px;\n\tcolor: white;\n}\n@media(max-width: 320px){\n.jumbotron-text h1{\n\t\tfont-size: 30px;\n\t\tline-height: 45px\n}\n.jumbotron-search .input-group {\n\t\twidth: 80%;\n}\n}\n\n\n", ""]);
+exports.push([module.i, "\n.footer-block h6 {\n\tfont-size: 13px;\n\tfont-weight: 700;\n\ttext-transform: uppercase;\n\tletter-spacing: 1px;\n\tpadding-bottom: 15px;\n}\n.footer-block .footer-news {\n\tmargin-bottom : 15px;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: row;\n\t        flex-direction: row;\n}\n.footer-block .footer-news-content {\n\tpadding : 0px;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tmargin-left: 20px;\n}\n.footer-block .footer-news-content .footer-news-title {\n\t\ttext-transform: uppercase;\n\t\tletter-spacing: 1.3px;\n\t\tfont-weight: 500;\n}\n.footer-block .footer-news-content .footer-news-date {\n\t\tfont-size: 12px;\n\t\tcolor: #777;\n\t\tpadding: 5px 0px;\n}\n", ""]);
 
 // exports
 
@@ -18815,13 +18872,27 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.contact-line {\n\tfont-size: 14px;\n    line-height: 18px;\n    font-weight: 700;\n    margin-bottom: 33px;\n}\n.contact-line i {\n\t\tcolor: #ff6600;\n\t    display: inline-block;\n\t    margin-right: 10px;\n}\n.contact-line a,\n\t.contact-line span {\n\t\tcolor : #484848;\n\t\tfont-weight: 400;\n}\n", ""]);
+exports.push([module.i, "\n.jumbotron{\n\tbackground: url('/img/welcome3.jpg');\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\theight: 500px;\n\ttext-align: center;\n}\n.jumbotron-text {\n\tcolor: #484848;\n}\n.jumbotron-text h1 span {\n\tfont-weight: 700;\n\tcolor: #ff6600;\n}\n@media(max-width: 743px){\n.jumbotron-text h1{\n\t\tfont-size: 30px;\n\t\tline-height: 40px;\n\t\tletter-spacing: -0.6px;\n\t\tfont-weight: 400;\n\t\tmargin-top: 100px;\n}\n.jumbotron-search .input-group {\n\t\twidth: 70%;\n\t\tmargin: 0 auto;\n}\n}\n@media(min-width: 744px){\n.jumbotron-text h1{\n\t\tfont-size: 48px;\n\t\tline-height: 55px;\n\t\tletter-spacing: -0.8px;\n\t\tfont-weight: 300;\n\t\tmargin-top: 100px;\n}\n.jumbotron-search .input-group {\n\t\twidth: 50%;\n\t\tmargin: 0 auto;\n}\n}\n.jumbotron-search {\n\tpadding-top: 30px;\n}\n.jumbotron-search input{\n\tpadding: 25px;\n\tborder: 0px;\n}\n.jumbotron-search .input-group-addon {\n\tbackground: #ff6600;\n\tborder: 0px;\n}\n.jumbotron-search .input-group-addon button{\n\tbackground: transparent;\n\tborder: 0px;\n\tcolor: white;\n}\n@media(max-width: 320px){\n.jumbotron-text h1{\n\t\tfont-size: 30px;\n\t\tline-height: 45px\n}\n.jumbotron-search .input-group {\n\t\twidth: 80%;\n}\n}\n\n\n", ""]);
 
 // exports
 
 
 /***/ }),
 /* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "\n.contact-line {\n\tfont-size: 14px;\n    line-height: 18px;\n    font-weight: 700;\n    margin-bottom: 33px;\n}\n.contact-line i {\n\t\tcolor: #ff6600;\n\t    display: inline-block;\n\t    margin-right: 10px;\n}\n.contact-line a,\n\t.contact-line span {\n\t\tcolor : #484848;\n\t\tfont-weight: 400;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -19007,18 +19078,18 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(45)
+__webpack_require__(49)
 
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(7),
   /* template */
-  __webpack_require__(36),
+  __webpack_require__(39),
   /* scopeId */
   null,
   /* cssModules */
@@ -19045,18 +19116,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(40)
+__webpack_require__(43)
 
 var Component = __webpack_require__(1)(
   /* script */
   null,
   /* template */
-  __webpack_require__(31),
+  __webpack_require__(33),
   /* scopeId */
   null,
   /* cssModules */
@@ -19083,18 +19154,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(47)
+__webpack_require__(51)
 
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(8),
   /* template */
-  __webpack_require__(38),
+  __webpack_require__(41),
   /* scopeId */
   null,
   /* cssModules */
@@ -19121,18 +19192,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(46)
+__webpack_require__(50)
 
 var Component = __webpack_require__(1)(
   /* script */
   null,
   /* template */
-  __webpack_require__(37),
+  __webpack_require__(40),
   /* scopeId */
   null,
   /* cssModules */
@@ -19159,18 +19230,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(48)
+__webpack_require__(52)
 
 var Component = __webpack_require__(1)(
   /* script */
   null,
   /* template */
-  __webpack_require__(39),
+  __webpack_require__(42),
   /* scopeId */
   null,
   /* cssModules */
@@ -19197,18 +19268,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(42)
+__webpack_require__(45)
 
 var Component = __webpack_require__(1)(
   /* script */
   null,
   /* template */
-  __webpack_require__(33),
+  __webpack_require__(35),
   /* scopeId */
   null,
   /* cssModules */
@@ -19235,18 +19306,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(41)
+__webpack_require__(44)
 
 var Component = __webpack_require__(1)(
   /* script */
   null,
   /* template */
-  __webpack_require__(32),
+  __webpack_require__(34),
   /* scopeId */
   null,
   /* cssModules */
@@ -19273,18 +19344,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(44)
+__webpack_require__(48)
 
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(9),
   /* template */
-  __webpack_require__(35),
+  __webpack_require__(38),
   /* scopeId */
   null,
   /* cssModules */
@@ -19311,18 +19382,56 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(43)
+__webpack_require__(46)
+
+var Component = __webpack_require__(1)(
+  /* script */
+  null,
+  /* template */
+  __webpack_require__(36),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/var/www/resources/assets/js/trip/Home/partial/TripCard.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] TripCard.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-33bb93da", Component.options)
+  } else {
+    hotAPI.reload("data-v-33bb93da", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(47)
 
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(10),
   /* template */
-  __webpack_require__(34),
+  __webpack_require__(37),
   /* scopeId */
   null,
   /* cssModules */
@@ -19349,7 +19458,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 31 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -19422,7 +19531,7 @@ if (false) {
 }
 
 /***/ }),
-/* 32 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -19473,7 +19582,7 @@ if (false) {
 }
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -19528,7 +19637,63 @@ if (false) {
 }
 
 /***/ }),
-/* 34 */
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "swiper-slide trip-card"
+  }, [_c('div', {
+    staticClass: "trip-item"
+  }, [_c('div', {
+    staticClass: "trip-img"
+  }, [_c('img', {
+    attrs: {
+      "src": "img/trip1.jpg",
+      "alt": ""
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "trip-caption"
+  }, [_c('div', {
+    staticClass: "trip-label"
+  }, [_c('span', {
+    staticClass: "label label-primary label-trip"
+  }, [_vm._v("Opentrip")]), _vm._v(" "), _c('span', {
+    staticClass: "trip-location color-grey-1"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker"
+  }), _vm._v("sibayak\n\t\t\t\t")])]), _vm._v(" "), _c('span', {
+    staticClass: "trip-title"
+  }, [_vm._v("Gunung Sibayak Berastagi")]), _vm._v(" "), _c('span', {
+    staticClass: "trip-price"
+  }, [_vm._v("MULAI "), _c('strong', [_vm._v("Rp. 250.000")]), _vm._v(" / ORANG")]), _vm._v(" "), _c('p', {
+    staticClass: "color-grey-2"
+  }, [_vm._v("\n\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Sed laudantium quasic veritatis suscipit odio?\n\t\t\t")]), _vm._v(" "), _c('div', {
+    staticClass: "trip-button"
+  }, [_c('a', {
+    staticClass: "trip-button-detail",
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("details")]), _vm._v(" "), _c('a', {
+    staticClass: "trip-button-booking",
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("booking")])])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-33bb93da", module.exports)
+  }
+}
+
+/***/ }),
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -19538,12 +19703,20 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "swiper-container"
   }, [_c('div', {
     staticClass: "swiper-wrapper"
-  }, [_c('TripCard'), _vm._v(" "), _c('TripCard'), _vm._v(" "), _c('TripCard'), _vm._v(" "), _c('TripCard'), _vm._v(" "), _c('TripCard')], 1), _vm._v(" "), _c('div', {
-    staticClass: "swiper-button-next"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "swiper-button-prev"
-  })])])
-},staticRenderFns: []}
+  }, [_c('TripCard'), _vm._v(" "), _c('TripCard'), _vm._v(" "), _c('TripCard'), _vm._v(" "), _c('TripCard'), _vm._v(" "), _c('TripCard')], 1), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1)])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "swiper-button-prev trip-arrow trip-arrow-left"
+  }, [_c('span', {
+    staticClass: "fa fa-angle-left"
+  })])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "swiper-button-next trip-arrow trip-arrow-right"
+  }, [_c('span', {
+    staticClass: "fa fa-angle-right"
+  })])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -19553,13 +19726,13 @@ if (false) {
 }
 
 /***/ }),
-/* 35 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('DolanHeader'), _vm._v(" "), _c('Jumbotron'), _vm._v(" "), _c('div', {
     staticClass: "container"
-  }, [_c('TripCardContainer')], 1), _vm._v(" "), _c('DolanFooter')], 1)
+  }, [_c('SubHeader'), _vm._v(" "), _c('TripCardContainer'), _vm._v(" "), _c('SubHeader')], 1), _vm._v(" "), _c('TripLocationContainer'), _vm._v(" "), _c('DolanFooter')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -19570,7 +19743,7 @@ if (false) {
 }
 
 /***/ }),
-/* 36 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -19589,7 +19762,7 @@ if (false) {
 }
 
 /***/ }),
-/* 37 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -19664,7 +19837,7 @@ if (false) {
 }
 
 /***/ }),
-/* 38 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -19703,7 +19876,7 @@ if (false) {
 }
 
 /***/ }),
-/* 39 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -19754,7 +19927,7 @@ if (false) {
 }
 
 /***/ }),
-/* 40 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -19780,7 +19953,7 @@ if(false) {
 }
 
 /***/ }),
-/* 41 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -19806,7 +19979,7 @@ if(false) {
 }
 
 /***/ }),
-/* 42 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -19832,13 +20005,39 @@ if(false) {
 }
 
 /***/ }),
-/* 43 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
 var content = __webpack_require__(15);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("6c9f400b", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-33bb93da!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TripCard.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-33bb93da!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TripCard.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(16);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -19858,13 +20057,13 @@ if(false) {
 }
 
 /***/ }),
-/* 44 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(16);
+var content = __webpack_require__(17);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -19884,13 +20083,13 @@ if(false) {
 }
 
 /***/ }),
-/* 45 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(17);
+var content = __webpack_require__(18);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -19910,13 +20109,13 @@ if(false) {
 }
 
 /***/ }),
-/* 46 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(18);
+var content = __webpack_require__(19);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -19936,13 +20135,13 @@ if(false) {
 }
 
 /***/ }),
-/* 47 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(19);
+var content = __webpack_require__(20);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -19962,13 +20161,13 @@ if(false) {
 }
 
 /***/ }),
-/* 48 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(20);
+var content = __webpack_require__(21);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -19988,7 +20187,7 @@ if(false) {
 }
 
 /***/ }),
-/* 49 */
+/* 53 */
 /***/ (function(module, exports) {
 
 /**
@@ -20021,7 +20220,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 50 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29219,10 +29418,10 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(21), __webpack_require__(51)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(22), __webpack_require__(55)))
 
 /***/ }),
-/* 51 */
+/* 55 */
 /***/ (function(module, exports) {
 
 var g;
@@ -29249,7 +29448,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 52 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(5);
@@ -29257,10 +29456,6 @@ module.exports = __webpack_require__(6);
 
 
 /***/ }),
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
 /* 57 */,
 /* 58 */,
 /* 59 */,
@@ -29270,26 +29465,30 @@ module.exports = __webpack_require__(6);
 /* 63 */,
 /* 64 */,
 /* 65 */,
-/* 66 */
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(69)
+__webpack_require__(73)
 
 var Component = __webpack_require__(1)(
   /* script */
   null,
   /* template */
-  __webpack_require__(67),
+  __webpack_require__(71),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "/var/www/resources/assets/js/trip/Home/partial/TripCard.vue"
+Component.options.__file = "/var/www/resources/assets/js/global/SubHeader.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] TripCard.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] SubHeader.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -29298,9 +29497,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-33bb93da", Component.options)
+    hotAPI.createRecord("data-v-7956e38b", Component.options)
   } else {
-    hotAPI.reload("data-v-33bb93da", Component.options)
+    hotAPI.reload("data-v-7956e38b", Component.options)
   }
 })()}
 
@@ -29308,59 +29507,34 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 67 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _vm._m(0)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "swiper-slide trip-card"
+    staticClass: "row"
   }, [_c('div', {
-    staticClass: "trip-item"
+    staticClass: "col-xs-12 col-sm-8 col-sm-offset-2"
   }, [_c('div', {
-    staticClass: "trip-img"
-  }, [_c('img', {
-    attrs: {
-      "src": "img/trip1.jpg",
-      "alt": ""
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "trip-caption"
-  }, [_c('div', {
-    staticClass: "trip-label"
-  }, [_c('span', {
-    staticClass: "label label-primary label-trip"
-  }, [_vm._v("Opentrip")]), _vm._v(" "), _c('span', {
-    staticClass: "trip-location color-grey-2"
-  }, [_c('i', {
-    staticClass: "fa fa-map-marker"
-  }), _vm._v("sibayak\n\t\t\t\t")])]), _vm._v(" "), _c('span', {
-    staticClass: "trip-title"
-  }, [_vm._v("Gunung Sibayak Berastagi")]), _vm._v(" "), _c('span', {
-    staticClass: "trip-price"
-  }, [_vm._v("Mulai "), _c('strong', [_vm._v("Rp. 250.000")]), _vm._v(" / orang")]), _vm._v(" "), _c('p', {
-    staticClass: "color-grey-2"
-  }, [_vm._v("\n\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Sed laudantium quasic veritatis suscipit odio?\n\t\t\t")]), _vm._v(" "), _c('a', {
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("detail")]), _vm._v(" "), _c('a', {
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("booking")])])])])
+    staticClass: "subheader-title"
+  }, [_c('h4', {
+    staticClass: "subheader-title-1"
+  }, [_vm._v("Trip")]), _vm._v(" "), _c('h2', {
+    staticClass: "subheader-title-2"
+  }, [_vm._v("Most popular trip")])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-33bb93da", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-7956e38b", module.exports)
   }
 }
 
 /***/ }),
-/* 68 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
@@ -29368,29 +29542,283 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n.trip-item{\n\t\tposition: relative;\n\t    width: 100%;\n\t    float: left;\n\t    display: inline-block;\n\t    box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.03);\n}\n.trip-img img {\n\t\twidth: 100%;\n    \theight: auto;\n    \tdisplay: block;\n}\n.trip-caption {\n\t\tposition: relative;\n    \twidth: 100%;\n    \tpadding: 24px 20px;\n    \tborder: 1px solid #efefef;\n    \tdisplay: -webkit-box;\n    \tdisplay: -ms-flexbox;\n    \tdisplay: flex;\n    \t-webkit-box-orient: vertical;\n    \t-webkit-box-direction: normal;\n    \t    -ms-flex-direction: column;\n    \t        flex-direction: column;\n}\n.trip-caption .trip-label {\n\t\tdisplay: -webkit-box;\n\t\tdisplay: -ms-flexbox;\n\t\tdisplay: flex;\n    \t-webkit-box-pack: justify;\n    \t    -ms-flex-pack: justify;\n    \t        justify-content: space-between;\n    \tpadding-bottom: 15px;\n}\n.label-trip{\n\t\tline-height: 2;\n}\n.trip-label .trip-location{\n\t\ttext-transform: uppercase;\n\t\tfont-size: 13px;\n\t\tfont-weight: 500;\n}\n.trip-label .trip-location .fa{\n\t\tpadding-right: 10px;\n}\n.trip-caption .trip-title{\n\t\ttext-transform: uppercase;\n\t\tfont-size: 16px;\n\t\tfont-weight: 700;\n\t\tletter-spacing: 1px;\n}\n.trip-caption .trip-price {\n}\n", ""]);
+exports.push([module.i, "\n.subheader-title {\n\t\tposition: relative;\n\t    text-align: center;\n\t    padding-top: 30px;\n\t    padding-bottom: 30px;\n\t    text-transform: uppercase;\n}\n.subheader-title-1{\n\t\tcolor: #ff6600;\n\t\tfont-weight: 700;\n\t    letter-spacing: 2px;\n\t    margin-bottom: 20px;\n\t    position: relative;\n    \tdisplay: inline-block;\n}\n.subheader-title-1:after{\n\t\tcontent: '';\n\t    width: 100%;\n\t    background: #ff6600;\n\t    height: 5px;\n\t    position: relative;\n\t    display: block;\n\t    float: none;\n\t    margin: 13px 0 0px;\n}\n.subheader-title-2{\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 69 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(68);
+var content = __webpack_require__(72);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("6c9f400b", content, false);
+var update = __webpack_require__(2)("89ed657a", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-33bb93da!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TripCard.vue", function() {
-     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-33bb93da!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TripCard.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-7956e38b!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SubHeader.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-7956e38b!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SubHeader.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(78)
+
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(76),
+  /* template */
+  __webpack_require__(75),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/var/www/resources/assets/js/trip/Home/partial/TripLocationContainer.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] TripLocationContainer.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-03218a59", Component.options)
+  } else {
+    hotAPI.reload("data-v-03218a59", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "triplocation-container"
+  }, [_c('div', {
+    staticClass: "row col-no-padd"
+  }, [_c('TripLocation'), _vm._v(" "), _c('TripLocation'), _vm._v(" "), _c('TripLocation'), _vm._v(" "), _c('TripLocation'), _vm._v(" "), _c('TripLocation'), _vm._v(" "), _c('TripLocation')], 1)])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-03218a59", module.exports)
+  }
+}
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _TripLocation = __webpack_require__(80);
+
+var _TripLocation2 = _interopRequireDefault(_TripLocation);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+	components: {
+		TripLocation: _TripLocation2.default
+	}
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "\n.col-no-padd>div{\n\t\tpadding-left: 0px;\n    \tpadding-right: 0px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(77);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("fab91516", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-03218a59!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TripLocationContainer.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-03218a59!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TripLocationContainer.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "\n.photo-block {\n    text-align: center;\n    color: #fff;\n    position: relative;\n    width: 100%;\n}\n.photo-block img {\n    width: 100%;\n    height: auto;\n    display: block;\n}\n.location-layer {\n    position: absolute;\n    left: 0px;\n    top: 0px;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0,0.6);\n    opacity: 0;\n    transition: all 0.3s ease-in;\n    -webkit-transition: all 0.3s ease-in;\n    -moz-transition: all 0.3s ease-in;\n    -ms-transition: all 0.3s ease-in;\n}\n.photo-block:hover .location-layer {\n    opacity: 1;\n}\n.photo-block:hover .hover-it h3{\n    color: #ff6600;\n}\n.vertical-align {\n    -webkit-transform: translateY(-50%);\n    transform: translateY(-50%);\n    top: 50%;\n    position: absolute;\n    width: 100%;\n    left: 0px;\n}\n.photo-title a h3{\n\tfont-size: 22px;\n    line-height: 30px;\n    font-weight: 700;\n    text-transform: uppercase;\n    letter-spacing: 5px;\n    color: #ffffff;\n}\n.delay-1 {\n    -webkit-transition: all 800ms cubic-bezier(0.23,1,0.32,1);\n    transition: all 800ms cubic-bezier(0.23,1,0.32,1);\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(82)
+
+var Component = __webpack_require__(1)(
+  /* script */
+  null,
+  /* template */
+  __webpack_require__(81),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/var/www/resources/assets/js/trip/Home/partial/TripLocation.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] TripLocation.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0a0252b8", Component.options)
+  } else {
+    hotAPI.reload("data-v-0a0252b8", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-4 col-sm-6 col-xs-12"
+  }, [_c('div', {
+    staticClass: "photo-block hover-aqua"
+  }, [_c('div', {
+    staticClass: "location-layer delay-1"
+  }), _vm._v(" "), _c('img', {
+    attrs: {
+      "src": "img/location1.jpg",
+      "alt": ""
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "vertical-align"
+  }, [_c('div', {
+    staticClass: "photo-title"
+  }, [_c('a', {
+    staticClass: "hover-it",
+    attrs: {
+      "href": "#"
+    }
+  }, [_c('h3', [_vm._v("Medan")])])])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-0a0252b8", module.exports)
+  }
+}
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(79);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("b7f44f16", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-0a0252b8!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TripLocation.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-0a0252b8!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./TripLocation.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
